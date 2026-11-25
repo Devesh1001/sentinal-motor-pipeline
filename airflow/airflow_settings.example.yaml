@@ -1,0 +1,22 @@
+# Copy to airflow_settings.yaml (git-ignored) and fill in the placeholders.
+# Astro CLI loads it into local Airflow on `astro dev start`.
+# Replace the three placeholders. The private key file itself goes in
+# include/keys/rsa_key.p8 (never commit it to Git).
+airflow:
+  connections:
+    - conn_id: snowflake_sentinal
+      conn_type: snowflake
+      conn_host:
+      conn_schema: STAGING
+      conn_login: SENTINAL_PIPELINE_SVC
+      conn_password:
+      conn_port:
+      conn_extra:
+        account: <orgname-accountname>
+        warehouse: COMPUTE_WH
+        database: SENTINAL_MOTOR
+        role: SM_PIPELINE
+        authenticator: SNOWFLAKE_JWT
+        private_key_file: /usr/local/airflow/include/keys/rsa_key.p8
+  pools: []
+  variables: []

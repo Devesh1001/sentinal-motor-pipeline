@@ -1,0 +1,32 @@
+# ---- Secrets: never commit ----
+*.p8
+*.pem
+*.pub
+rsa_key*
+keys/
+include/keys/
+.env
+airflow_settings.yaml
+.aws/
+
+# ---- Generator output and local state ----
+generator/output/
+output/
+generator_state.json
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ---- Airflow / Astro local runtime ----
+airflow/logs/
+airflow/.astro/
+logs/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

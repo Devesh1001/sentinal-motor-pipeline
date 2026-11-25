@@ -166,7 +166,8 @@ The queries are in [`snowflake/05_verification.sql`](snowflake/05_verification.s
 ├── airflow/                   Astro project: DAG, requirements, connection template
 └── docs/
     ├── design-decisions.md    why the pipeline is built the way it is
-    └── lessons-learned.md     problems hit while building it, and their fixes
+    ├── lessons-learned.md     problems hit while building it, and their fixes
+    └── setup-checklist.md     what to check before each stage
 ```
 
 ## Running it
@@ -198,6 +199,7 @@ The queries are in [`snowflake/05_verification.sql`](snowflake/05_verification.s
 
 - [Design decisions](docs/design-decisions.md): MERGE instead of rebuilds, excluding missing risk scores instead of defaulting them, why the pipeline has its own masking branch, and others.
 - [Lessons learned](docs/lessons-learned.md): real problems hit while building this, such as orphan claims, masked values leaking into tables, streams created after the data, and silently kept file format settings.
+- [Setup checklist](docs/setup-checklist.md): what to check before each stage so those problems don't happen.
 
 ## Possible next steps
 
